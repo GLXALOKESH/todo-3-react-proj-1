@@ -75,12 +75,12 @@ function App() {
     <>
       <Nav />
       <div className="container w-[100vw] h-[calc(100vh-50px)] flex items-center justify-center">
-        <div className="todoscont rounded-lg overflow-hidden w-[40vw] h-[80vh] bg-[#3C424A]">
-          <div className="innheader flex h-[40px] justify-center items-center text-white font-semibold shadow shadow-[rgb(0,0,0,0.3)] flex-col relative">
+        <div className="todoscont rounded-lg overflow-hidden w-[40vw] h-[80vh] bg-[#3C424A] max-sm:w-[85vw]">
+          <div className="innheader flex h-[40px] justify-center items-center text-white font-semibold shadow shadow-[rgb(0,0,0,0.3)] flex-col relative ">
             <div className="line h-[3px] w-[70px] rounded-full bg-[#ff4080] absolute bottom-0"></div>
             TODO
           </div>
-          <div className="innmaincont w-full h-[calc(100%-40px)] px-[60px] py-[80px] flex flex-col">
+          <div className="innmaincont w-full h-[calc(100%-40px)] px-[60px] py-[80px] flex flex-col max-sm:px-[30px]">
             <div className="inp w-full h-[32px] flex mb-[20px]">
               <input onChange={handleChange} value={todo} ref={inp} type="text" className='h-full w-[calc(100%-50px)] rounded-l-full outline-none pl-[10px] bg-[#343A40] border text-white border-[rgba(0,0,0,0.3)] focus:border-[rgb(255,215,0,0.5)] border-r-0 text-[14px]' />
               <button onClick={handleAdd} className="add h-full w-[50px] rounded-r-full bg-[#ff4080] flex justify-center items-center uppercase font-semibold text-white border-[1px] border-[rgba(0,0,0,0.5)] border-l-0 ">{change}</button>
