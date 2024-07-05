@@ -91,14 +91,14 @@ function App() {
                 <div className="todo w-full min-h-[40px] flex rounded-full hover:bg-[rgb(52,58,64,0.5)]" key={item.id}>
                   <div className="checkbox w-[35px] h-full flex justify-center items-center relative select-none">
                     <div className="box h-[15px] rounded-[3px] bg-[#5f6770] cursor-pointer aspect-square shadow-custom1 absolute left-[8px]" onClick={() => { item.isCompleted = !item.isCompleted; setTodos([...todos]); }}></div>
-                    <img src="src/images/tick.svg" alt="" className={item.isCompleted ? 'h-[25px] absolute top-[3px] right-[2px] cursor-pointer' : 'h-[25px] absolute top-[3px] right-[2px] cursor-pointer hidden'} onClick={() => { item.isCompleted = !item.isCompleted; setTodos([...todos]); }} />
+                    <img src="/tick.svg" alt="" className={item.isCompleted ? 'h-[25px] absolute top-[3px] right-[2px] cursor-pointer' : 'h-[25px] absolute top-[3px] right-[2px] cursor-pointer hidden'} onClick={() => { item.isCompleted = !item.isCompleted; setTodos([...todos]); }} />
                   </div>
                   <div className="name h-full w-[calc(100%-80px)] flex items-center font-sans capitalize font-semibold overflow-hidden text-[16px] text-white">
                     <p className={item.isCompleted ? 'text-ellipsis w-full overflow-hidden line-through decoration-black' : 'text-ellipsis w-full overflow-hidden'}>{item.todo}</p>
                   </div>
                   <div className="functions w-[45px] h-full select-none flex justify-center items-center gap-[5px]">
-                    <img src="src/images/edit.svg" alt="" className='h-[18px] cursor-pointer' onClick={() => { handleEdit(item) }} />
-                    <img src="src/images/delete.svg" onClick={() => { handleDelete(item.id) }} alt="" className='h-[18px] cursor-pointer' />
+                    <img src="/edit.svg" alt="" className='h-[18px] cursor-pointer' onClick={() => { handleEdit(item) }} />
+                    <img src="/delete.svg" onClick={() => { handleDelete(item.id) }} alt="" className='h-[18px] cursor-pointer' />
                   </div>
                 </div>
               ))}
